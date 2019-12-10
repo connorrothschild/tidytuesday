@@ -12,7 +12,9 @@ ui <- fluidPage(
     titlePanel(
       h1("A College Degree Lowers Job Automation Risk",
         style = "font-family: 'Helvetica Neue';
-        font-size: 20px; font-weight: 500; line-height: 1.1;")),
+        font-size: 20px; font-weight: 400; line-height: 1.1;"),
+      windowTitle = "Find Out If Your Job Will Be Automated"
+      ),
            # plot object for intro
     mainPanel(
       fluidRow(
@@ -77,10 +79,10 @@ server <- function(input, output, session) {
                      traceorder = "normal",
                      itemsizing = "constant",
                      tracegroupgap = 0,
-                     font = list(size = 9.5)),
+                     font = list(size = 13)),
       font = list(family = 'Helvetica Neue',
                   color = "black"),
-      margin = list(r=10, l=10, pad = 0),
+      margin = list(r=1, l=1,t=1,b=1,pad = 0),
       hoverlabel = list(bgcolor = 'white', color = 'black'),
       yaxis = list(
         tickfont = element_blank(),
